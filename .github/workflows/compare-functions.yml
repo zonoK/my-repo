@@ -1,0 +1,11 @@
+name: Comapre functions
+on: push
+jobs:
+    compare:
+        runs-on: ubuntu-latest
+        steps:
+            - run: printenv | grep '_FUNC'
+              env:
+                    CONTAINS_fUNC: ${{ contains('Hello', 'el') }} #contains関数
+                    ENDSWITH_FUNC: ${{ endsWith('Hello', 'lo') }} #endsWith関数
+                    STARTSWITH_FUNC: ${{ startsWith('Hello', 'He') }} #startsWith関数
