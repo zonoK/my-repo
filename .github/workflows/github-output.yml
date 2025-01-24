@@ -8,4 +8,4 @@ jobs:
               run: echo "result=Hello" >> "${GITHUB_OUTPUT}" # GITHUB_OUTPUTへ書き出し
             - env:
                 RESULT: ${{ steps.source.outputs.result }} # stepコンテキストから読み込み
-                run: echo "${RESULT}"
+              run: echo "${RESULT}"
